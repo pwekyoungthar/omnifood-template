@@ -41,112 +41,6 @@ default : 9px;
 
 */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-  font-size: 62.5%;
-}
-body {
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
-  color: #555;
-  line-height: 1;
-}
-/**********************************/
-/* General Component */
-/**********************************/
-.container {
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 0 3.2rem;
-}
-.grid {
-  display: grid;
-  row-gap: 9.6rem;
-  column-gap: 6.4rem;
-}
-.grid--2--cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-.grid--3--cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-.grid--4--cols {
-  grid-template-columns: repeat(4, 1fr);
-}
-.grid--center--v {
-  align-items: center;
-}
-
-.heading-primary,
-.heading-secondary,
-.heading-tertiary {
-  font-weight: 700;
-  color: #333;
-  letter-spacing: -0.5px;
-}
-.heading-primary {
-  font-size: 5.2rem;
-  line-height: 1.1;
-  margin-bottom: 3.2rem;
-}
-.heading-secondary {
-  font-size: 4.4rem;
-  line-height: 1.2;
-  margin-bottom: 9.6rem;
-}
-.heading-tertiary {
-  font-size: 3rem;
-  line-height: 1.2;
-  margin-bottom: 3.2rem;
-}
-.sub-heading {
-  color: #e67e22;
-  font-size: 1.6rem;
-  font-weight: 500;
-  display: block;
-  text-transform: uppercase;
-  margin-bottom: 1.6rem;
-  letter-spacing: 0.75px;
-}
-.btn:link,
-.btn:visited {
-  display: inline-block;
-  font-weight: 600;
-
-  text-decoration: none;
-  font-size: 2rem;
-  padding: 1.6rem 3.2rem;
-  border-radius: 9px;
-  transition: all 0.3s;
-}
-.btn--full:link,
-.btn--full:visited {
-  background-color: #e67e22;
-  color: #fff;
-  font-weight: 700;
-}
-.btn--outline:link,
-.btn--outline:visited {
-  background-color: #fff;
-  color: #555;
-}
-.btn-right-sm {
-  margin-right: 1.6rem !important;
-}
-.btn--full:hover,
-.btn--full:active {
-  background-color: #b8651b;
-}
-.btn--outline:hover,
-.btn--outline:active {
-  background-color: #fdf2e9;
-  /* border: 3px solid #fff; */
-  box-shadow: inset 0 0 0 3px #fff;
-}
 /**********************************/
 /* Header Component */
 /**********************************/
@@ -292,9 +186,6 @@ body {
 .step-img-box::after {
   content: "";
   display: block;
-
-  /* height: 60%; */
-
   position: absolute;
 
   top: 50%;
@@ -316,4 +207,79 @@ body {
 }
 .step-img {
   width: 35%;
+}
+/**********************************/
+/* Meal Section */
+/**********************************/
+.section-meals {
+  padding: 9.6rem 0;
+}
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.meal-img {
+  width: 100%;
+}
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+.meal-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333;
+}
+.meal-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.meal-attribute {
+  font-size: 1.8rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.meal-icon {
+  color: #e67e22;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+.tag--vegan {
+  background-color: #94d82d;
+}
+.tag--parelo {
+  background-color: #fcc419;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+.meal:hover {
+  transform: translateY(-1.2rem);
 }
