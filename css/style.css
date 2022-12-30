@@ -259,27 +259,153 @@ default : 9px;
 .tag--parelo {
   background-color: #fcc419;
 }
-.list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
-.list-item {
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-}
-.list-icon {
-  width: 3rem;
-  height: 3rem;
-  color: #e67e22;
-}
+
 .all-recipes {
   text-align: center;
   font-size: 1.8rem;
 }
 .meal:hover {
   transform: translateY(-1.2rem);
+}
+
+/**********************************/
+/* Testimonial Section */
+/**********************************/
+.section-testimonial {
+  background-color: #fae5d3;
+}
+.testimonial-container {
+  padding: 9.6rem 0;
+}
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+}
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #777;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+.gallery-item {
+  overflow: hidden;
+}
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/**********************************/
+/* Pricing Section */
+/**********************************/
+.section-pricing {
+  padding: 9.6rem 0;
+}
+.pricing {
+  border-radius: 11px;
+
+  width: 75%;
+}
+.pricing-plan--starter {
+  justify-self: end;
+  border: 1px solid #fdf2e9;
+  padding: 4.6rem;
+}
+.pricing-plan--complete {
+  background-color: #fdf2e9;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+.plan-name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.plan-sing-up {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+.pricing-plan--complete::after {
+  content: "Best Value";
+  position: absolute;
+  top: 6%;
+  right: -18%;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  background-color: #fcc419;
+  padding: 0.8rem 8rem;
+  transform: rotate(45deg);
+}
+
+/**********************************/
+/* Feature Section */
+/**********************************/
+.gird-feature--margin-top {
+  padding-top: 9.6rem;
+  padding-bottom: 9.6rem;
+}
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+.feature-icon {
+  color: #e67e22;
+  height: 3.2rem;
+  width: 3.2rem;
+  margin-bottom: 3.2rem;
+
+  background-color: #fdf2e9;
+  padding: 1.6rem;
+  border-radius: 50%;
 }
