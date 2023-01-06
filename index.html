@@ -4,7 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Omnifood</title>
+    <meta
+      name="description"
+      content="The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs. We have delivered 250,000+ meals last year!"
+    />
+    <title>Omnifood &mdash; Never Cook Again</title>
+    <!-- Favicon Link -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/favicon/site.webmanifest" />
+
     <!-- Google Fonts Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,11 +46,11 @@
       <img src="./img/omnifood-logo.png" alt="Omnifood Logo" class="logo" />
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">How It Works</a></li>
-          <li><a class="main-nav-link" href="#">Meals</a></li>
-          <li><a class="main-nav-link" href="#">Testimonials</a></li>
-          <li><a class="main-nav-link" href="#">Pricing</a></li>
-          <li><a class="main-nav-link nav-cta" href="#">Try For Free</a></li>
+          <li><a class="main-nav-link" href="#how">How It Works</a></li>
+          <li><a class="main-nav-link" href="#meals">Meals</a></li>
+          <li><a class="main-nav-link" href="#testimonial">Testimonials</a></li>
+          <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+          <li><a class="main-nav-link nav-cta" href="#cta">Try For Free</a></li>
         </ul>
       </nav>
       <button class="btn-mobile-nav">
@@ -46,8 +70,10 @@
               eat healthy again. Tailored to your personal tastes and
               nutritional needs. We have delivered 250,000+ meals last year!
             </p>
-            <a href="#" class="btn btn--full btn-right-sm">Start Eating Well</a>
-            <a href="#" class="btn btn--outline">Learn More &darr;</a>
+            <a href="#cta" class="btn btn--full btn-right-sm"
+              >Start Eating Well</a
+            >
+            <a href="#how" class="btn btn--outline">Learn More &darr;</a>
             <div class="delivered-meals">
               <div class="deilvered-img">
                 <img
@@ -81,11 +107,21 @@
             </div>
           </div>
           <div class="hero-img-box">
-            <img
-              class="img-hero"
-              src="./img/hero.png"
-              alt="Omnifood Banner Image"
-            />
+            <picture>
+              <source
+                srcset="./img/hero-img/optimize-hero.webp"
+                type="image/png"
+              />
+              <source
+                srcset="./img/hero-img/optimize-hero.png"
+                type="image/png"
+              />
+              <img
+                class="img-hero"
+                src="./img/hero-img/optimize-hero.webp"
+                alt="Omnifood Banner Image"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -107,7 +143,7 @@
           </div>
         </div>
       </section>
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
           <span class="sub-heading">How It Work</span>
           <h2 class="heading-secondary">
@@ -171,7 +207,7 @@
           </div>
         </div>
       </section>
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container center-text">
           <span class="sub-heading"> Meals </span>
           <h2 class="heading-secondary">
@@ -286,7 +322,7 @@
           <a href="#" class="link">See All Recipes &rAarr;</a>
         </div>
       </section>
-      <section class="section-testimonial grid grid--2--cols">
+      <section class="section-testimonial grid grid--2--cols" id="testimonial">
         <div class="testimonial-container">
           <span class="sub-heading">Testimonials</span>
           <h2 class="heading-secondary">Once you try it,you can't go back</h2>
@@ -380,7 +416,7 @@
           </figure>
         </div>
       </section>
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="container">
           <span class="sub-heading">Pricing</span>
           <h2 class="heading-secondary">
@@ -483,7 +519,7 @@
           </div>
         </div>
       </section>
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
@@ -493,10 +529,11 @@
                 eating well today. You can cancel or pause anytime. And the
                 first meal is on us!
               </p>
-              <form action="#" class="cta-form">
+              <form name="sign-up" class="cta-form" netlify>
                 <div>
                   <label for="full-name">Your Name</label>
                   <input
+                    name="full-name"
                     id="full-name"
                     type="text"
                     placeholder="Mg Mg"
@@ -506,6 +543,7 @@
                 <div>
                   <label for="for-email">Your Email</label>
                   <input
+                    name="email"
                     required
                     id="for-email"
                     type="email"
@@ -514,7 +552,7 @@
                 </div>
                 <div>
                   <label for="select-where">Where did you hear from us?</label>
-                  <select name="" id="select-where" required>
+                  <select name="select-where" id="select-where" required>
                     <option value="Please Choose One Option">
                       Please Choose One Option
                     </option>
@@ -621,6 +659,10 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <!-- Polyfill Library -->
+    <script src="https://unpkg.com/smoothscrollpolyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <!-- Custom JS File -->
+    <script src="./js/script.js"></script>
   </body>
 </html>
 
